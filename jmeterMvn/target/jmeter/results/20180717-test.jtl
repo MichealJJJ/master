@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="316" it="0" lt="316" ct="0" ts="1531811041101" s="false" lb="创建外卖订单" rc="200" rm="HTTP/1.1 200" tn="美团订单创建&amp;顺丰达达 1-1" dt="text" by="294" sby="0" ng="1" na="2" hn="DESKTOP-09QETSP">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /bad/</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.1 200
+Date: Tue, 17 Jul 2018 07:04:01 GMT
+Content-Type: application/json;charset=UTF-8
+Content-Length: 13
+Connection: keep-alive
+Server: nginx-clojure
+X-Application-Context: gateway-cater-meituan:zbrd,config,datasource,redis,mongodb:9515
+Nginx_Server: zbrd_36_116
+</responseHeader>
+  <requestHeader class="java.lang.String">ContentType: application/x-www-form-urlencoded
+kry-api-brand-id: 32299
+Connection: keep-alive
+Content-Length: 1624
+Content-Type: application/x-www-form-urlencoded
+</requestHeader>
+  <responseData class="java.lang.String">{&quot;data&quot;:&quot;ok&quot;}</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">developerId=100973&amp;order={ &quot;avgSendTime&quot;: 2400.0,&quot;caution&quot;: &quot;&quot;,&quot;cityId&quot;: 999999, &quot;ctime&quot;: 1531811041,&quot;daySeq&quot;: &quot;1&quot;, &quot;deliveryTime&quot;: 0, &quot;detail&quot;: &quot;[{\&quot;app_food_code\&quot;:\&quot;烤翅\&quot;,\&quot;box_num\&quot;:1,\&quot;box_price\&quot;:0.01,\&quot;food_discount\&quot;:1,\&quot;cart_id\&quot;:0,\&quot;food_name\&quot;:\&quot;烤翅\&quot;,\&quot;food_property\&quot;:\&quot;\&quot;, \&quot;price\&quot;:0.01,\&quot;quantity\&quot;:1,\&quot;sku_id\&quot;:\&quot;\&quot;, \&quot;spec\&quot;:\&quot;麻辣\&quot;,\&quot;unit\&quot;:\&quot;份\&quot;}]&quot;, &quot;dinnersNumber&quot;: 10, &quot;ePoiId&quot;: &quot;810094332&quot;, &quot;extras&quot;: &quot;[{}]&quot;, 	&quot;hasInvoiced&quot;: 0, &quot;invoiceTitle&quot;: &quot;接口订单&quot;,&quot;taxpayerId&quot;: &quot;1234556899000&quot;,&quot;isFavorites&quot;: true, &quot;isPoiFirstOrder&quot;: false, &quot;isThirdShipping&quot;: 0, &quot;latitude&quot;: 40.020761, &quot;logisticsCode&quot;: &quot;0002&quot;, &quot;longitude&quot;: 116.359337, &quot;orderId&quot;: 1531811041, &quot;orderIdView&quot;: 1531811041, &quot;originalPrice&quot;: 0.02, &quot;payType&quot;: 1,&quot;poiAddress&quot;: &quot;南极洲04号站&quot;, &quot;poiFirstOrder&quot;: false, &quot;poiId&quot;: 1665034, &quot;poiName&quot;: &quot;kfpttest_zl8_23&quot;, 	&quot;poiPhone&quot;: &quot;4009208801&quot;, 	&quot;poiReceiveDetail&quot;: &quot;{\&quot;actOrderChargeByMt\&quot;:[],\&quot;actOrderChargeByMtIterator\&quot;:{},\&quot;actOrderChargeByMtSize\&quot;:0,\&quot;actOrderChargeByPoi\&quot;:[],\&quot;actOrderChargeByPoiIterator\&quot;:{\&quot;$ref\&quot;:\&quot;$.actOrderChargeByMtIterator\&quot;},\&quot;actOrderChargeByPoiSize\&quot;:0,\&quot;foodShareFeeChargeByPoi\&quot;:0,\&quot;logisticsFee\&quot;:0,\&quot;onlinePayment\&quot;:2,\&quot;setActOrderChargeByMt\&quot;:true,\&quot;setActOrderChargeByPoi\&quot;:true,\&quot;setFoodShareFeeChargeByPoi\&quot;:true,\&quot;setLogisticsFee\&quot;:true,\&quot;setOnlinePayment\&quot;:true,\&quot;setWmPoiReceiveCent\&quot;:true,\&quot;wmPoiReceiveCent\&quot;:2}&quot;, &quot;recipientAddress&quot;: &quot;西藏自治区林芝市墨脱县&quot;, 	&quot;recipientName&quot;: &quot;廖雪强2&quot;, &quot;recipientPhone&quot;: &quot;18224414866_123456&quot;, &quot;shipperPhone&quot;: &quot;&quot;, &quot;shippingFee&quot;: 0.0, &quot;status&quot;: 1, &quot;total&quot;: 0.02, &quot;utime&quot;: 1531811041 }  </queryString>
+  <java.net.URL>http://citestpartner.shishike.com/api/cater/takeout/meituan/order/create</java.net.URL>
+</httpSample>
+<httpSample t="316" it="0" lt="316" ct="0" ts="1531811041101" s="false" lb="创建外卖订单" rc="200" rm="HTTP/1.1 200" tn="美团订单创建&amp;顺丰达达 2-1" dt="text" by="294" sby="0" ng="1" na="2" hn="DESKTOP-09QETSP">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /bad/</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.1 200
+Date: Tue, 17 Jul 2018 07:04:01 GMT
+Content-Type: application/json;charset=UTF-8
+Content-Length: 13
+Connection: keep-alive
+Server: nginx-clojure
+X-Application-Context: gateway-cater-meituan:zbrd,config,datasource,redis,mongodb:9515
+Nginx_Server: zbrd_36_116
+</responseHeader>
+  <requestHeader class="java.lang.String">ContentType: application/x-www-form-urlencoded
+kry-api-brand-id: 32299
+Connection: keep-alive
+Content-Length: 1624
+Content-Type: application/x-www-form-urlencoded
+</requestHeader>
+  <responseData class="java.lang.String">{&quot;data&quot;:&quot;ok&quot;}</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">developerId=100973&amp;order={ &quot;avgSendTime&quot;: 2400.0,&quot;caution&quot;: &quot;&quot;,&quot;cityId&quot;: 999999, &quot;ctime&quot;: 1531811041,&quot;daySeq&quot;: &quot;1&quot;, &quot;deliveryTime&quot;: 0, &quot;detail&quot;: &quot;[{\&quot;app_food_code\&quot;:\&quot;烤翅\&quot;,\&quot;box_num\&quot;:1,\&quot;box_price\&quot;:0.01,\&quot;food_discount\&quot;:1,\&quot;cart_id\&quot;:0,\&quot;food_name\&quot;:\&quot;烤翅\&quot;,\&quot;food_property\&quot;:\&quot;\&quot;, \&quot;price\&quot;:0.01,\&quot;quantity\&quot;:1,\&quot;sku_id\&quot;:\&quot;\&quot;, \&quot;spec\&quot;:\&quot;麻辣\&quot;,\&quot;unit\&quot;:\&quot;份\&quot;}]&quot;, &quot;dinnersNumber&quot;: 10, &quot;ePoiId&quot;: &quot;810094332&quot;, &quot;extras&quot;: &quot;[{}]&quot;, 	&quot;hasInvoiced&quot;: 0, &quot;invoiceTitle&quot;: &quot;接口订单&quot;,&quot;taxpayerId&quot;: &quot;1234556899000&quot;,&quot;isFavorites&quot;: true, &quot;isPoiFirstOrder&quot;: false, &quot;isThirdShipping&quot;: 0, &quot;latitude&quot;: 40.020761, &quot;logisticsCode&quot;: &quot;0002&quot;, &quot;longitude&quot;: 116.359337, &quot;orderId&quot;: 1531811041, &quot;orderIdView&quot;: 1531811041, &quot;originalPrice&quot;: 0.02, &quot;payType&quot;: 1,&quot;poiAddress&quot;: &quot;南极洲04号站&quot;, &quot;poiFirstOrder&quot;: false, &quot;poiId&quot;: 1665034, &quot;poiName&quot;: &quot;kfpttest_zl8_23&quot;, 	&quot;poiPhone&quot;: &quot;4009208801&quot;, 	&quot;poiReceiveDetail&quot;: &quot;{\&quot;actOrderChargeByMt\&quot;:[],\&quot;actOrderChargeByMtIterator\&quot;:{},\&quot;actOrderChargeByMtSize\&quot;:0,\&quot;actOrderChargeByPoi\&quot;:[],\&quot;actOrderChargeByPoiIterator\&quot;:{\&quot;$ref\&quot;:\&quot;$.actOrderChargeByMtIterator\&quot;},\&quot;actOrderChargeByPoiSize\&quot;:0,\&quot;foodShareFeeChargeByPoi\&quot;:0,\&quot;logisticsFee\&quot;:0,\&quot;onlinePayment\&quot;:2,\&quot;setActOrderChargeByMt\&quot;:true,\&quot;setActOrderChargeByPoi\&quot;:true,\&quot;setFoodShareFeeChargeByPoi\&quot;:true,\&quot;setLogisticsFee\&quot;:true,\&quot;setOnlinePayment\&quot;:true,\&quot;setWmPoiReceiveCent\&quot;:true,\&quot;wmPoiReceiveCent\&quot;:2}&quot;, &quot;recipientAddress&quot;: &quot;西藏自治区林芝市墨脱县&quot;, 	&quot;recipientName&quot;: &quot;廖雪强2&quot;, &quot;recipientPhone&quot;: &quot;18224414866_123456&quot;, &quot;shipperPhone&quot;: &quot;&quot;, &quot;shippingFee&quot;: 0.0, &quot;status&quot;: 1, &quot;total&quot;: 0.02, &quot;utime&quot;: 1531811041 }  </queryString>
+  <java.net.URL>http://citestpartner.shishike.com/api/cater/takeout/meituan/order/create</java.net.URL>
+</httpSample>
+<httpSample t="186" it="0" lt="186" ct="0" ts="1531811041435" s="true" lb="创建外卖订单" rc="200" rm="HTTP/1.1 200" tn="美团订单创建&amp;顺丰达达 1-1" dt="text" by="294" sby="0" ng="1" na="2" hn="DESKTOP-09QETSP">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.1 200
+Date: Tue, 17 Jul 2018 07:04:01 GMT
+Content-Type: application/json;charset=UTF-8
+Content-Length: 13
+Connection: keep-alive
+Server: nginx-clojure
+X-Application-Context: gateway-cater-meituan:zbrd,config,datasource,redis,mongodb:9515
+Nginx_Server: zbrd_36_116
+</responseHeader>
+  <requestHeader class="java.lang.String">ContentType: application/x-www-form-urlencoded
+kry-api-brand-id: 32299
+Connection: keep-alive
+Content-Length: 1624
+Content-Type: application/x-www-form-urlencoded
+</requestHeader>
+  <responseData class="java.lang.String">{&quot;data&quot;:&quot;ok&quot;}</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">developerId=100973&amp;order={ &quot;avgSendTime&quot;: 2400.0,&quot;caution&quot;: &quot;&quot;,&quot;cityId&quot;: 999999, &quot;ctime&quot;: 1531811041,&quot;daySeq&quot;: &quot;1&quot;, &quot;deliveryTime&quot;: 0, &quot;detail&quot;: &quot;[{\&quot;app_food_code\&quot;:\&quot;烤翅\&quot;,\&quot;box_num\&quot;:1,\&quot;box_price\&quot;:0.01,\&quot;food_discount\&quot;:1,\&quot;cart_id\&quot;:0,\&quot;food_name\&quot;:\&quot;烤翅\&quot;,\&quot;food_property\&quot;:\&quot;\&quot;, \&quot;price\&quot;:0.01,\&quot;quantity\&quot;:1,\&quot;sku_id\&quot;:\&quot;\&quot;, \&quot;spec\&quot;:\&quot;麻辣\&quot;,\&quot;unit\&quot;:\&quot;份\&quot;}]&quot;, &quot;dinnersNumber&quot;: 10, &quot;ePoiId&quot;: &quot;810094332&quot;, &quot;extras&quot;: &quot;[{}]&quot;, 	&quot;hasInvoiced&quot;: 0, &quot;invoiceTitle&quot;: &quot;接口订单&quot;,&quot;taxpayerId&quot;: &quot;1234556899000&quot;,&quot;isFavorites&quot;: true, &quot;isPoiFirstOrder&quot;: false, &quot;isThirdShipping&quot;: 0, &quot;latitude&quot;: 40.020761, &quot;logisticsCode&quot;: &quot;0002&quot;, &quot;longitude&quot;: 116.359337, &quot;orderId&quot;: 1531811041, &quot;orderIdView&quot;: 1531811041, &quot;originalPrice&quot;: 0.02, &quot;payType&quot;: 1,&quot;poiAddress&quot;: &quot;南极洲04号站&quot;, &quot;poiFirstOrder&quot;: false, &quot;poiId&quot;: 1665034, &quot;poiName&quot;: &quot;kfpttest_zl8_23&quot;, 	&quot;poiPhone&quot;: &quot;4009208801&quot;, 	&quot;poiReceiveDetail&quot;: &quot;{\&quot;actOrderChargeByMt\&quot;:[],\&quot;actOrderChargeByMtIterator\&quot;:{},\&quot;actOrderChargeByMtSize\&quot;:0,\&quot;actOrderChargeByPoi\&quot;:[],\&quot;actOrderChargeByPoiIterator\&quot;:{\&quot;$ref\&quot;:\&quot;$.actOrderChargeByMtIterator\&quot;},\&quot;actOrderChargeByPoiSize\&quot;:0,\&quot;foodShareFeeChargeByPoi\&quot;:0,\&quot;logisticsFee\&quot;:0,\&quot;onlinePayment\&quot;:2,\&quot;setActOrderChargeByMt\&quot;:true,\&quot;setActOrderChargeByPoi\&quot;:true,\&quot;setFoodShareFeeChargeByPoi\&quot;:true,\&quot;setLogisticsFee\&quot;:true,\&quot;setOnlinePayment\&quot;:true,\&quot;setWmPoiReceiveCent\&quot;:true,\&quot;wmPoiReceiveCent\&quot;:2}&quot;, &quot;recipientAddress&quot;: &quot;西藏自治区林芝市墨脱县&quot;, 	&quot;recipientName&quot;: &quot;廖雪强2&quot;, &quot;recipientPhone&quot;: &quot;18224414866_123456&quot;, &quot;shipperPhone&quot;: &quot;&quot;, &quot;shippingFee&quot;: 0.0, &quot;status&quot;: 1, &quot;total&quot;: 0.02, &quot;utime&quot;: 1531811041 }  </queryString>
+  <java.net.URL>http://citestpartner.shishike.com/api/cater/takeout/meituan/order/create</java.net.URL>
+</httpSample>
+<httpSample t="196" it="0" lt="196" ct="0" ts="1531811041434" s="true" lb="创建外卖订单" rc="200" rm="HTTP/1.1 200" tn="美团订单创建&amp;顺丰达达 2-1" dt="text" by="294" sby="0" ng="1" na="1" hn="DESKTOP-09QETSP">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.1 200
+Date: Tue, 17 Jul 2018 07:04:01 GMT
+Content-Type: application/json;charset=UTF-8
+Content-Length: 13
+Connection: keep-alive
+Server: nginx-clojure
+X-Application-Context: gateway-cater-meituan:zbrd,config,datasource,redis,mongodb:9515
+Nginx_Server: zbrd_36_116
+</responseHeader>
+  <requestHeader class="java.lang.String">ContentType: application/x-www-form-urlencoded
+kry-api-brand-id: 32299
+Connection: keep-alive
+Content-Length: 1624
+Content-Type: application/x-www-form-urlencoded
+</requestHeader>
+  <responseData class="java.lang.String">{&quot;data&quot;:&quot;ok&quot;}</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">developerId=100973&amp;order={ &quot;avgSendTime&quot;: 2400.0,&quot;caution&quot;: &quot;&quot;,&quot;cityId&quot;: 999999, &quot;ctime&quot;: 1531811041,&quot;daySeq&quot;: &quot;1&quot;, &quot;deliveryTime&quot;: 0, &quot;detail&quot;: &quot;[{\&quot;app_food_code\&quot;:\&quot;烤翅\&quot;,\&quot;box_num\&quot;:1,\&quot;box_price\&quot;:0.01,\&quot;food_discount\&quot;:1,\&quot;cart_id\&quot;:0,\&quot;food_name\&quot;:\&quot;烤翅\&quot;,\&quot;food_property\&quot;:\&quot;\&quot;, \&quot;price\&quot;:0.01,\&quot;quantity\&quot;:1,\&quot;sku_id\&quot;:\&quot;\&quot;, \&quot;spec\&quot;:\&quot;麻辣\&quot;,\&quot;unit\&quot;:\&quot;份\&quot;}]&quot;, &quot;dinnersNumber&quot;: 10, &quot;ePoiId&quot;: &quot;810094332&quot;, &quot;extras&quot;: &quot;[{}]&quot;, 	&quot;hasInvoiced&quot;: 0, &quot;invoiceTitle&quot;: &quot;接口订单&quot;,&quot;taxpayerId&quot;: &quot;1234556899000&quot;,&quot;isFavorites&quot;: true, &quot;isPoiFirstOrder&quot;: false, &quot;isThirdShipping&quot;: 0, &quot;latitude&quot;: 40.020761, &quot;logisticsCode&quot;: &quot;0002&quot;, &quot;longitude&quot;: 116.359337, &quot;orderId&quot;: 1531811041, &quot;orderIdView&quot;: 1531811041, &quot;originalPrice&quot;: 0.02, &quot;payType&quot;: 1,&quot;poiAddress&quot;: &quot;南极洲04号站&quot;, &quot;poiFirstOrder&quot;: false, &quot;poiId&quot;: 1665034, &quot;poiName&quot;: &quot;kfpttest_zl8_23&quot;, 	&quot;poiPhone&quot;: &quot;4009208801&quot;, 	&quot;poiReceiveDetail&quot;: &quot;{\&quot;actOrderChargeByMt\&quot;:[],\&quot;actOrderChargeByMtIterator\&quot;:{},\&quot;actOrderChargeByMtSize\&quot;:0,\&quot;actOrderChargeByPoi\&quot;:[],\&quot;actOrderChargeByPoiIterator\&quot;:{\&quot;$ref\&quot;:\&quot;$.actOrderChargeByMtIterator\&quot;},\&quot;actOrderChargeByPoiSize\&quot;:0,\&quot;foodShareFeeChargeByPoi\&quot;:0,\&quot;logisticsFee\&quot;:0,\&quot;onlinePayment\&quot;:2,\&quot;setActOrderChargeByMt\&quot;:true,\&quot;setActOrderChargeByPoi\&quot;:true,\&quot;setFoodShareFeeChargeByPoi\&quot;:true,\&quot;setLogisticsFee\&quot;:true,\&quot;setOnlinePayment\&quot;:true,\&quot;setWmPoiReceiveCent\&quot;:true,\&quot;wmPoiReceiveCent\&quot;:2}&quot;, &quot;recipientAddress&quot;: &quot;西藏自治区林芝市墨脱县&quot;, 	&quot;recipientName&quot;: &quot;廖雪强2&quot;, &quot;recipientPhone&quot;: &quot;18224414866_123456&quot;, &quot;shipperPhone&quot;: &quot;&quot;, &quot;shippingFee&quot;: 0.0, &quot;status&quot;: 1, &quot;total&quot;: 0.02, &quot;utime&quot;: 1531811041 }  </queryString>
+  <java.net.URL>http://citestpartner.shishike.com/api/cater/takeout/meituan/order/create</java.net.URL>
+</httpSample>
+
+</testResults>

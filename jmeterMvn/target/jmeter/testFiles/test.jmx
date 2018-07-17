@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="3.2" jmeter="3.3 r1808647">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="测试计划" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="美团订单创建&amp;顺丰达达" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1511517026000</longProp>
+        <longProp name="ThreadGroup.end_time">1511517026000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="创建外卖订单" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="developerId" elementType="HTTPArgument">
+                <stringProp name="Argument.name">developerId</stringProp>
+                <stringProp name="Argument.value">100973</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="order" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{ &quot;avgSendTime&quot;: 2400.0,&quot;caution&quot;: &quot;&quot;,&quot;cityId&quot;: 999999, &quot;ctime&quot;: ${__time(/1000,)},&quot;daySeq&quot;: &quot;1&quot;, &quot;deliveryTime&quot;: ${deliveryTime}, &quot;detail&quot;: &quot;[{\&quot;app_food_code\&quot;:\&quot;烤翅\&quot;,\&quot;box_num\&quot;:1,\&quot;box_price\&quot;:0.01,\&quot;food_discount\&quot;:1,\&quot;cart_id\&quot;:0,\&quot;food_name\&quot;:\&quot;烤翅\&quot;,\&quot;food_property\&quot;:\&quot;\&quot;, \&quot;price\&quot;:0.01,\&quot;quantity\&quot;:1,\&quot;sku_id\&quot;:\&quot;\&quot;, \&quot;spec\&quot;:\&quot;麻辣\&quot;,\&quot;unit\&quot;:\&quot;份\&quot;}]&quot;, &quot;dinnersNumber&quot;: ${dinnersNumber}, &quot;ePoiId&quot;: &quot;${shopId}&quot;, &quot;extras&quot;: &quot;[{}]&quot;, 	&quot;hasInvoiced&quot;: 0, &quot;invoiceTitle&quot;: &quot;${invoiceTitle}&quot;,&quot;taxpayerId&quot;: &quot;${taxpayerId}&quot;,&quot;isFavorites&quot;: true, &quot;isPoiFirstOrder&quot;: false, &quot;isThirdShipping&quot;: 0, &quot;latitude&quot;: ${latitude}, &quot;logisticsCode&quot;: &quot;${logisticsCode}&quot;, &quot;longitude&quot;: ${longitude}, &quot;orderId&quot;: ${orderId}, &quot;orderIdView&quot;: ${orderId}, &quot;originalPrice&quot;: 0.02, &quot;payType&quot;: ${payType},&quot;poiAddress&quot;: &quot;南极洲04号站&quot;, &quot;poiFirstOrder&quot;: false, &quot;poiId&quot;: 1665034, &quot;poiName&quot;: &quot;kfpttest_zl8_23&quot;, 	&quot;poiPhone&quot;: &quot;4009208801&quot;, 	&quot;poiReceiveDetail&quot;: &quot;{\&quot;actOrderChargeByMt\&quot;:[],\&quot;actOrderChargeByMtIterator\&quot;:{},\&quot;actOrderChargeByMtSize\&quot;:0,\&quot;actOrderChargeByPoi\&quot;:[],\&quot;actOrderChargeByPoiIterator\&quot;:{\&quot;$ref\&quot;:\&quot;$.actOrderChargeByMtIterator\&quot;},\&quot;actOrderChargeByPoiSize\&quot;:0,\&quot;foodShareFeeChargeByPoi\&quot;:0,\&quot;logisticsFee\&quot;:0,\&quot;onlinePayment\&quot;:2,\&quot;setActOrderChargeByMt\&quot;:true,\&quot;setActOrderChargeByPoi\&quot;:true,\&quot;setFoodShareFeeChargeByPoi\&quot;:true,\&quot;setLogisticsFee\&quot;:true,\&quot;setOnlinePayment\&quot;:true,\&quot;setWmPoiReceiveCent\&quot;:true,\&quot;wmPoiReceiveCent\&quot;:2}&quot;, &quot;recipientAddress&quot;: &quot;西藏自治区林芝市墨脱县&quot;, 	&quot;recipientName&quot;: &quot;廖雪强2&quot;, &quot;recipientPhone&quot;: &quot;${phone}&quot;, &quot;shipperPhone&quot;: &quot;&quot;, &quot;shippingFee&quot;: 0.0, &quot;status&quot;: ${status}, &quot;total&quot;: 0.02, &quot;utime&quot;: ${__time(/1000,)} }  </stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">order</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/cater/takeout/meituan/order/create</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.implementation">Java</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor" enabled="true">
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="script">import java.util.Date;
+long times=new Date().getTime()/1000;
+log.info(times+&quot;&quot;);
+vars.put(&quot;orderId&quot;,times+&quot;&quot;);</stringProp>
+          </BeanShellPreProcessor>
+          <hashTree/>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="外卖下单变量" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="deliveryTime" elementType="Argument">
+                <stringProp name="Argument.name">deliveryTime</stringProp>
+                <stringProp name="Argument.value">0</stringProp>
+                <stringProp name="Argument.desc">	用户预计送达时间，“立即送达”时为0</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="dinnersNumber" elementType="Argument">
+                <stringProp name="Argument.name">dinnersNumber</stringProp>
+                <stringProp name="Argument.value">10</stringProp>
+                <stringProp name="Argument.desc">就餐人数</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="invoiceTitle" elementType="Argument">
+                <stringProp name="Argument.name">invoiceTitle</stringProp>
+                <stringProp name="Argument.value">接口订单</stringProp>
+                <stringProp name="Argument.desc">发票抬头</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="logisticsCode" elementType="Argument">
+                <stringProp name="Argument.name">logisticsCode</stringProp>
+                <stringProp name="Argument.value">0002</stringProp>
+                <stringProp name="Argument.desc">0000：商家自配送    0002：趣活     0016：达达     0033：E代送    1001	团专送-加盟1002	美团专送-自建1003美团配送-众包1004美团专送-城市代理2001角马</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="payType" elementType="Argument">
+                <stringProp name="Argument.name">payType</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.desc">支付类型（1：货到付款；2：在线支付）</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="status" elementType="Argument">
+                <stringProp name="Argument.name">status</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.desc">订单状态1	用户已提交订单 2	可推送到App方平台也可推送到商家 3	商家已收到 4	商家已确认 6	已配送 8	已完成 9	已取消</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="shopId" elementType="Argument">
+                <stringProp name="Argument.name">shopId</stringProp>
+                <stringProp name="Argument.value">810094332</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="taxpayerId" elementType="Argument">
+                <stringProp name="Argument.name">taxpayerId</stringProp>
+                <stringProp name="Argument.value">1234556899000</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="latitude" elementType="Argument">
+                <stringProp name="Argument.name">latitude</stringProp>
+                <stringProp name="Argument.value">40.020761</stringProp>
+                <stringProp name="Argument.desc">纬度</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="longitude" elementType="Argument">
+                <stringProp name="Argument.name">longitude</stringProp>
+                <stringProp name="Argument.value">116.359337</stringProp>
+                <stringProp name="Argument.desc">经度</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="phone" elementType="Argument">
+                <stringProp name="Argument.name">phone</stringProp>
+                <stringProp name="Argument.value">18224414866_123456</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+            <stringProp name="TestPlan.comments">0000：商家自配送    0002：趣活     0016：达达     0033：E代送    1001：团专送-加盟   1002：美团专送-自建   1003：美团配送-众包    1004：美团专送-城市代理2001角马</stringProp>
+          </Arguments>
+          <hashTree/>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">kry-api-brand-id</stringProp>
+                <stringProp name="Header.value">32299</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="97285">bad</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="url" elementType="Argument">
+              <stringProp name="Argument.name">url</stringProp>
+              <stringProp name="Argument.value">citestpartner.shishike.com</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP请求默认值" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${url}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path"></stringProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </ConfigTestElement>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">ContentType</stringProp>
+              <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <ResultCollector guiclass="AssertionVisualizer" testclass="ResultCollector" testname="断言结果" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="创建外卖订单" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="developerId" elementType="HTTPArgument">
+                <stringProp name="Argument.name">developerId</stringProp>
+                <stringProp name="Argument.value">100973</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="order" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{ &quot;avgSendTime&quot;: 2400.0,&quot;caution&quot;: &quot;&quot;,&quot;cityId&quot;: 999999, &quot;ctime&quot;: ${__time(/1000,)},&quot;daySeq&quot;: &quot;1&quot;, &quot;deliveryTime&quot;: ${deliveryTime}, &quot;detail&quot;: &quot;[{\&quot;app_food_code\&quot;:\&quot;烤翅\&quot;,\&quot;box_num\&quot;:1,\&quot;box_price\&quot;:0.01,\&quot;food_discount\&quot;:1,\&quot;cart_id\&quot;:0,\&quot;food_name\&quot;:\&quot;烤翅\&quot;,\&quot;food_property\&quot;:\&quot;\&quot;, \&quot;price\&quot;:0.01,\&quot;quantity\&quot;:1,\&quot;sku_id\&quot;:\&quot;\&quot;, \&quot;spec\&quot;:\&quot;麻辣\&quot;,\&quot;unit\&quot;:\&quot;份\&quot;}]&quot;, &quot;dinnersNumber&quot;: ${dinnersNumber}, &quot;ePoiId&quot;: &quot;${shopId}&quot;, &quot;extras&quot;: &quot;[{}]&quot;, 	&quot;hasInvoiced&quot;: 0, &quot;invoiceTitle&quot;: &quot;${invoiceTitle}&quot;,&quot;taxpayerId&quot;: &quot;${taxpayerId}&quot;,&quot;isFavorites&quot;: true, &quot;isPoiFirstOrder&quot;: false, &quot;isThirdShipping&quot;: 0, &quot;latitude&quot;: ${latitude}, &quot;logisticsCode&quot;: &quot;${logisticsCode}&quot;, &quot;longitude&quot;: ${longitude}, &quot;orderId&quot;: ${orderId}, &quot;orderIdView&quot;: ${orderId}, &quot;originalPrice&quot;: 0.02, &quot;payType&quot;: ${payType},&quot;poiAddress&quot;: &quot;南极洲04号站&quot;, &quot;poiFirstOrder&quot;: false, &quot;poiId&quot;: 1665034, &quot;poiName&quot;: &quot;kfpttest_zl8_23&quot;, 	&quot;poiPhone&quot;: &quot;4009208801&quot;, 	&quot;poiReceiveDetail&quot;: &quot;{\&quot;actOrderChargeByMt\&quot;:[],\&quot;actOrderChargeByMtIterator\&quot;:{},\&quot;actOrderChargeByMtSize\&quot;:0,\&quot;actOrderChargeByPoi\&quot;:[],\&quot;actOrderChargeByPoiIterator\&quot;:{\&quot;$ref\&quot;:\&quot;$.actOrderChargeByMtIterator\&quot;},\&quot;actOrderChargeByPoiSize\&quot;:0,\&quot;foodShareFeeChargeByPoi\&quot;:0,\&quot;logisticsFee\&quot;:0,\&quot;onlinePayment\&quot;:2,\&quot;setActOrderChargeByMt\&quot;:true,\&quot;setActOrderChargeByPoi\&quot;:true,\&quot;setFoodShareFeeChargeByPoi\&quot;:true,\&quot;setLogisticsFee\&quot;:true,\&quot;setOnlinePayment\&quot;:true,\&quot;setWmPoiReceiveCent\&quot;:true,\&quot;wmPoiReceiveCent\&quot;:2}&quot;, &quot;recipientAddress&quot;: &quot;西藏自治区林芝市墨脱县&quot;, 	&quot;recipientName&quot;: &quot;廖雪强2&quot;, &quot;recipientPhone&quot;: &quot;${phone}&quot;, &quot;shipperPhone&quot;: &quot;&quot;, &quot;shippingFee&quot;: 0.0, &quot;status&quot;: ${status}, &quot;total&quot;: 0.02, &quot;utime&quot;: ${__time(/1000,)} }  </stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">order</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/cater/takeout/meituan/order/create</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.implementation">Java</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor" enabled="true">
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="script">import java.util.Date;
+long times=new Date().getTime()/1000;
+log.info(times+&quot;&quot;);
+vars.put(&quot;orderId&quot;,times+&quot;&quot;);</stringProp>
+          </BeanShellPreProcessor>
+          <hashTree/>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="外卖下单变量" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="deliveryTime" elementType="Argument">
+                <stringProp name="Argument.name">deliveryTime</stringProp>
+                <stringProp name="Argument.value">0</stringProp>
+                <stringProp name="Argument.desc">	用户预计送达时间，“立即送达”时为0</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="dinnersNumber" elementType="Argument">
+                <stringProp name="Argument.name">dinnersNumber</stringProp>
+                <stringProp name="Argument.value">10</stringProp>
+                <stringProp name="Argument.desc">就餐人数</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="invoiceTitle" elementType="Argument">
+                <stringProp name="Argument.name">invoiceTitle</stringProp>
+                <stringProp name="Argument.value">接口订单</stringProp>
+                <stringProp name="Argument.desc">发票抬头</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="logisticsCode" elementType="Argument">
+                <stringProp name="Argument.name">logisticsCode</stringProp>
+                <stringProp name="Argument.value">0002</stringProp>
+                <stringProp name="Argument.desc">0000：商家自配送    0002：趣活     0016：达达     0033：E代送    1001	团专送-加盟1002	美团专送-自建1003美团配送-众包1004美团专送-城市代理2001角马</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="payType" elementType="Argument">
+                <stringProp name="Argument.name">payType</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.desc">支付类型（1：货到付款；2：在线支付）</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="status" elementType="Argument">
+                <stringProp name="Argument.name">status</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.desc">订单状态1	用户已提交订单 2	可推送到App方平台也可推送到商家 3	商家已收到 4	商家已确认 6	已配送 8	已完成 9	已取消</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="shopId" elementType="Argument">
+                <stringProp name="Argument.name">shopId</stringProp>
+                <stringProp name="Argument.value">810094332</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="taxpayerId" elementType="Argument">
+                <stringProp name="Argument.name">taxpayerId</stringProp>
+                <stringProp name="Argument.value">1234556899000</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="latitude" elementType="Argument">
+                <stringProp name="Argument.name">latitude</stringProp>
+                <stringProp name="Argument.value">40.020761</stringProp>
+                <stringProp name="Argument.desc">纬度</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="longitude" elementType="Argument">
+                <stringProp name="Argument.name">longitude</stringProp>
+                <stringProp name="Argument.value">116.359337</stringProp>
+                <stringProp name="Argument.desc">经度</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="phone" elementType="Argument">
+                <stringProp name="Argument.name">phone</stringProp>
+                <stringProp name="Argument.value">18224414866_123456</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+            <stringProp name="TestPlan.comments">0000：商家自配送    0002：趣活     0016：达达     0033：E代送    1001：团专送-加盟   1002：美团专送-自建   1003：美团配送-众包    1004：美团专送-城市代理2001角马</stringProp>
+          </Arguments>
+          <hashTree/>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">kry-api-brand-id</stringProp>
+                <stringProp name="Header.value">32299</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="3548">ok</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="美团订单创建&amp;顺丰达达" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1511517026000</longProp>
+        <longProp name="ThreadGroup.end_time">1511517026000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="创建外卖订单" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="developerId" elementType="HTTPArgument">
+                <stringProp name="Argument.name">developerId</stringProp>
+                <stringProp name="Argument.value">100973</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="order" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{ &quot;avgSendTime&quot;: 2400.0,&quot;caution&quot;: &quot;&quot;,&quot;cityId&quot;: 999999, &quot;ctime&quot;: ${__time(/1000,)},&quot;daySeq&quot;: &quot;1&quot;, &quot;deliveryTime&quot;: ${deliveryTime}, &quot;detail&quot;: &quot;[{\&quot;app_food_code\&quot;:\&quot;烤翅\&quot;,\&quot;box_num\&quot;:1,\&quot;box_price\&quot;:0.01,\&quot;food_discount\&quot;:1,\&quot;cart_id\&quot;:0,\&quot;food_name\&quot;:\&quot;烤翅\&quot;,\&quot;food_property\&quot;:\&quot;\&quot;, \&quot;price\&quot;:0.01,\&quot;quantity\&quot;:1,\&quot;sku_id\&quot;:\&quot;\&quot;, \&quot;spec\&quot;:\&quot;麻辣\&quot;,\&quot;unit\&quot;:\&quot;份\&quot;}]&quot;, &quot;dinnersNumber&quot;: ${dinnersNumber}, &quot;ePoiId&quot;: &quot;${shopId}&quot;, &quot;extras&quot;: &quot;[{}]&quot;, 	&quot;hasInvoiced&quot;: 0, &quot;invoiceTitle&quot;: &quot;${invoiceTitle}&quot;,&quot;taxpayerId&quot;: &quot;${taxpayerId}&quot;,&quot;isFavorites&quot;: true, &quot;isPoiFirstOrder&quot;: false, &quot;isThirdShipping&quot;: 0, &quot;latitude&quot;: ${latitude}, &quot;logisticsCode&quot;: &quot;${logisticsCode}&quot;, &quot;longitude&quot;: ${longitude}, &quot;orderId&quot;: ${orderId}, &quot;orderIdView&quot;: ${orderId}, &quot;originalPrice&quot;: 0.02, &quot;payType&quot;: ${payType},&quot;poiAddress&quot;: &quot;南极洲04号站&quot;, &quot;poiFirstOrder&quot;: false, &quot;poiId&quot;: 1665034, &quot;poiName&quot;: &quot;kfpttest_zl8_23&quot;, 	&quot;poiPhone&quot;: &quot;4009208801&quot;, 	&quot;poiReceiveDetail&quot;: &quot;{\&quot;actOrderChargeByMt\&quot;:[],\&quot;actOrderChargeByMtIterator\&quot;:{},\&quot;actOrderChargeByMtSize\&quot;:0,\&quot;actOrderChargeByPoi\&quot;:[],\&quot;actOrderChargeByPoiIterator\&quot;:{\&quot;$ref\&quot;:\&quot;$.actOrderChargeByMtIterator\&quot;},\&quot;actOrderChargeByPoiSize\&quot;:0,\&quot;foodShareFeeChargeByPoi\&quot;:0,\&quot;logisticsFee\&quot;:0,\&quot;onlinePayment\&quot;:2,\&quot;setActOrderChargeByMt\&quot;:true,\&quot;setActOrderChargeByPoi\&quot;:true,\&quot;setFoodShareFeeChargeByPoi\&quot;:true,\&quot;setLogisticsFee\&quot;:true,\&quot;setOnlinePayment\&quot;:true,\&quot;setWmPoiReceiveCent\&quot;:true,\&quot;wmPoiReceiveCent\&quot;:2}&quot;, &quot;recipientAddress&quot;: &quot;西藏自治区林芝市墨脱县&quot;, 	&quot;recipientName&quot;: &quot;廖雪强2&quot;, &quot;recipientPhone&quot;: &quot;${phone}&quot;, &quot;shipperPhone&quot;: &quot;&quot;, &quot;shippingFee&quot;: 0.0, &quot;status&quot;: ${status}, &quot;total&quot;: 0.02, &quot;utime&quot;: ${__time(/1000,)} }  </stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">order</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/cater/takeout/meituan/order/create</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.implementation">Java</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor" enabled="true">
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="script">import java.util.Date;
+long times=new Date().getTime()/1000;
+log.info(times+&quot;&quot;);
+vars.put(&quot;orderId&quot;,times+&quot;&quot;);</stringProp>
+          </BeanShellPreProcessor>
+          <hashTree/>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="外卖下单变量" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="deliveryTime" elementType="Argument">
+                <stringProp name="Argument.name">deliveryTime</stringProp>
+                <stringProp name="Argument.value">0</stringProp>
+                <stringProp name="Argument.desc">	用户预计送达时间，“立即送达”时为0</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="dinnersNumber" elementType="Argument">
+                <stringProp name="Argument.name">dinnersNumber</stringProp>
+                <stringProp name="Argument.value">10</stringProp>
+                <stringProp name="Argument.desc">就餐人数</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="invoiceTitle" elementType="Argument">
+                <stringProp name="Argument.name">invoiceTitle</stringProp>
+                <stringProp name="Argument.value">接口订单</stringProp>
+                <stringProp name="Argument.desc">发票抬头</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="logisticsCode" elementType="Argument">
+                <stringProp name="Argument.name">logisticsCode</stringProp>
+                <stringProp name="Argument.value">0002</stringProp>
+                <stringProp name="Argument.desc">0000：商家自配送    0002：趣活     0016：达达     0033：E代送    1001	团专送-加盟1002	美团专送-自建1003美团配送-众包1004美团专送-城市代理2001角马</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="payType" elementType="Argument">
+                <stringProp name="Argument.name">payType</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.desc">支付类型（1：货到付款；2：在线支付）</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="status" elementType="Argument">
+                <stringProp name="Argument.name">status</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.desc">订单状态1	用户已提交订单 2	可推送到App方平台也可推送到商家 3	商家已收到 4	商家已确认 6	已配送 8	已完成 9	已取消</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="shopId" elementType="Argument">
+                <stringProp name="Argument.name">shopId</stringProp>
+                <stringProp name="Argument.value">810094332</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="taxpayerId" elementType="Argument">
+                <stringProp name="Argument.name">taxpayerId</stringProp>
+                <stringProp name="Argument.value">1234556899000</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="latitude" elementType="Argument">
+                <stringProp name="Argument.name">latitude</stringProp>
+                <stringProp name="Argument.value">40.020761</stringProp>
+                <stringProp name="Argument.desc">纬度</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="longitude" elementType="Argument">
+                <stringProp name="Argument.name">longitude</stringProp>
+                <stringProp name="Argument.value">116.359337</stringProp>
+                <stringProp name="Argument.desc">经度</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="phone" elementType="Argument">
+                <stringProp name="Argument.name">phone</stringProp>
+                <stringProp name="Argument.value">18224414866_123456</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+            <stringProp name="TestPlan.comments">0000：商家自配送    0002：趣活     0016：达达     0033：E代送    1001：团专送-加盟   1002：美团专送-自建   1003：美团配送-众包    1004：美团专送-城市代理2001角马</stringProp>
+          </Arguments>
+          <hashTree/>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">kry-api-brand-id</stringProp>
+                <stringProp name="Header.value">32299</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="97285">bad</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="url" elementType="Argument">
+              <stringProp name="Argument.name">url</stringProp>
+              <stringProp name="Argument.value">citestpartner.shishike.com</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP请求默认值" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${url}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path"></stringProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </ConfigTestElement>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">ContentType</stringProp>
+              <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <ResultCollector guiclass="AssertionVisualizer" testclass="ResultCollector" testname="断言结果" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="创建外卖订单" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="developerId" elementType="HTTPArgument">
+                <stringProp name="Argument.name">developerId</stringProp>
+                <stringProp name="Argument.value">100973</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="order" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{ &quot;avgSendTime&quot;: 2400.0,&quot;caution&quot;: &quot;&quot;,&quot;cityId&quot;: 999999, &quot;ctime&quot;: ${__time(/1000,)},&quot;daySeq&quot;: &quot;1&quot;, &quot;deliveryTime&quot;: ${deliveryTime}, &quot;detail&quot;: &quot;[{\&quot;app_food_code\&quot;:\&quot;烤翅\&quot;,\&quot;box_num\&quot;:1,\&quot;box_price\&quot;:0.01,\&quot;food_discount\&quot;:1,\&quot;cart_id\&quot;:0,\&quot;food_name\&quot;:\&quot;烤翅\&quot;,\&quot;food_property\&quot;:\&quot;\&quot;, \&quot;price\&quot;:0.01,\&quot;quantity\&quot;:1,\&quot;sku_id\&quot;:\&quot;\&quot;, \&quot;spec\&quot;:\&quot;麻辣\&quot;,\&quot;unit\&quot;:\&quot;份\&quot;}]&quot;, &quot;dinnersNumber&quot;: ${dinnersNumber}, &quot;ePoiId&quot;: &quot;${shopId}&quot;, &quot;extras&quot;: &quot;[{}]&quot;, 	&quot;hasInvoiced&quot;: 0, &quot;invoiceTitle&quot;: &quot;${invoiceTitle}&quot;,&quot;taxpayerId&quot;: &quot;${taxpayerId}&quot;,&quot;isFavorites&quot;: true, &quot;isPoiFirstOrder&quot;: false, &quot;isThirdShipping&quot;: 0, &quot;latitude&quot;: ${latitude}, &quot;logisticsCode&quot;: &quot;${logisticsCode}&quot;, &quot;longitude&quot;: ${longitude}, &quot;orderId&quot;: ${orderId}, &quot;orderIdView&quot;: ${orderId}, &quot;originalPrice&quot;: 0.02, &quot;payType&quot;: ${payType},&quot;poiAddress&quot;: &quot;南极洲04号站&quot;, &quot;poiFirstOrder&quot;: false, &quot;poiId&quot;: 1665034, &quot;poiName&quot;: &quot;kfpttest_zl8_23&quot;, 	&quot;poiPhone&quot;: &quot;4009208801&quot;, 	&quot;poiReceiveDetail&quot;: &quot;{\&quot;actOrderChargeByMt\&quot;:[],\&quot;actOrderChargeByMtIterator\&quot;:{},\&quot;actOrderChargeByMtSize\&quot;:0,\&quot;actOrderChargeByPoi\&quot;:[],\&quot;actOrderChargeByPoiIterator\&quot;:{\&quot;$ref\&quot;:\&quot;$.actOrderChargeByMtIterator\&quot;},\&quot;actOrderChargeByPoiSize\&quot;:0,\&quot;foodShareFeeChargeByPoi\&quot;:0,\&quot;logisticsFee\&quot;:0,\&quot;onlinePayment\&quot;:2,\&quot;setActOrderChargeByMt\&quot;:true,\&quot;setActOrderChargeByPoi\&quot;:true,\&quot;setFoodShareFeeChargeByPoi\&quot;:true,\&quot;setLogisticsFee\&quot;:true,\&quot;setOnlinePayment\&quot;:true,\&quot;setWmPoiReceiveCent\&quot;:true,\&quot;wmPoiReceiveCent\&quot;:2}&quot;, &quot;recipientAddress&quot;: &quot;西藏自治区林芝市墨脱县&quot;, 	&quot;recipientName&quot;: &quot;廖雪强2&quot;, &quot;recipientPhone&quot;: &quot;${phone}&quot;, &quot;shipperPhone&quot;: &quot;&quot;, &quot;shippingFee&quot;: 0.0, &quot;status&quot;: ${status}, &quot;total&quot;: 0.02, &quot;utime&quot;: ${__time(/1000,)} }  </stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">order</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/cater/takeout/meituan/order/create</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.implementation">Java</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor" enabled="true">
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="script">import java.util.Date;
+long times=new Date().getTime()/1000;
+log.info(times+&quot;&quot;);
+vars.put(&quot;orderId&quot;,times+&quot;&quot;);</stringProp>
+          </BeanShellPreProcessor>
+          <hashTree/>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="外卖下单变量" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="deliveryTime" elementType="Argument">
+                <stringProp name="Argument.name">deliveryTime</stringProp>
+                <stringProp name="Argument.value">0</stringProp>
+                <stringProp name="Argument.desc">	用户预计送达时间，“立即送达”时为0</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="dinnersNumber" elementType="Argument">
+                <stringProp name="Argument.name">dinnersNumber</stringProp>
+                <stringProp name="Argument.value">10</stringProp>
+                <stringProp name="Argument.desc">就餐人数</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="invoiceTitle" elementType="Argument">
+                <stringProp name="Argument.name">invoiceTitle</stringProp>
+                <stringProp name="Argument.value">接口订单</stringProp>
+                <stringProp name="Argument.desc">发票抬头</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="logisticsCode" elementType="Argument">
+                <stringProp name="Argument.name">logisticsCode</stringProp>
+                <stringProp name="Argument.value">0002</stringProp>
+                <stringProp name="Argument.desc">0000：商家自配送    0002：趣活     0016：达达     0033：E代送    1001	团专送-加盟1002	美团专送-自建1003美团配送-众包1004美团专送-城市代理2001角马</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="payType" elementType="Argument">
+                <stringProp name="Argument.name">payType</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.desc">支付类型（1：货到付款；2：在线支付）</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="status" elementType="Argument">
+                <stringProp name="Argument.name">status</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.desc">订单状态1	用户已提交订单 2	可推送到App方平台也可推送到商家 3	商家已收到 4	商家已确认 6	已配送 8	已完成 9	已取消</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="shopId" elementType="Argument">
+                <stringProp name="Argument.name">shopId</stringProp>
+                <stringProp name="Argument.value">810094332</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="taxpayerId" elementType="Argument">
+                <stringProp name="Argument.name">taxpayerId</stringProp>
+                <stringProp name="Argument.value">1234556899000</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="latitude" elementType="Argument">
+                <stringProp name="Argument.name">latitude</stringProp>
+                <stringProp name="Argument.value">40.020761</stringProp>
+                <stringProp name="Argument.desc">纬度</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="longitude" elementType="Argument">
+                <stringProp name="Argument.name">longitude</stringProp>
+                <stringProp name="Argument.value">116.359337</stringProp>
+                <stringProp name="Argument.desc">经度</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="phone" elementType="Argument">
+                <stringProp name="Argument.name">phone</stringProp>
+                <stringProp name="Argument.value">18224414866_123456</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+            <stringProp name="TestPlan.comments">0000：商家自配送    0002：趣活     0016：达达     0033：E代送    1001：团专送-加盟   1002：美团专送-自建   1003：美团配送-众包    1004：美团专送-城市代理2001角马</stringProp>
+          </Arguments>
+          <hashTree/>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">kry-api-brand-id</stringProp>
+                <stringProp name="Header.value">32299</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="3548">ok</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+    <WorkBench guiclass="WorkBenchGui" testclass="WorkBench" testname="工作台" enabled="true">
+      <boolProp name="WorkBench.save">true</boolProp>
+    </WorkBench>
+    <hashTree/>
+  </hashTree>
+</jmeterTestPlan>

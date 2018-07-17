@@ -1,0 +1,67 @@
+2018-07-17 15:03:55,469 INFO o.a.j.u.JMeterUtils: Setting Locale to zh_CN
+2018-07-17 15:03:55,480 INFO o.a.j.JMeter: Loading system properties from: system.properties
+2018-07-17 15:03:55,488 INFO o.a.j.JMeter: Copyright (c) 1998-2017 The Apache Software Foundation
+2018-07-17 15:03:55,488 INFO o.a.j.JMeter: Version 3.3 r1808647
+2018-07-17 15:03:55,488 INFO o.a.j.JMeter: java.version=1.8.0_144
+2018-07-17 15:03:55,488 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) Client VM
+2018-07-17 15:03:55,488 INFO o.a.j.JMeter: os.name=Windows 10
+2018-07-17 15:03:55,488 INFO o.a.j.JMeter: os.arch=x86
+2018-07-17 15:03:55,488 INFO o.a.j.JMeter: os.version=10.0
+2018-07-17 15:03:55,488 INFO o.a.j.JMeter: file.encoding=GBK
+2018-07-17 15:03:55,488 INFO o.a.j.JMeter: Max memory     =518979584
+2018-07-17 15:03:55,488 INFO o.a.j.JMeter: Available Processors =4
+2018-07-17 15:03:55,497 INFO o.a.j.JMeter: Default Locale=中文 (中国)
+2018-07-17 15:03:55,498 INFO o.a.j.JMeter: JMeter  Locale=中文 (中国)
+2018-07-17 15:03:55,498 INFO o.a.j.JMeter: JMeterHome=D:\OnGateway\jmeterMvn\target\jmeter
+2018-07-17 15:03:55,498 INFO o.a.j.JMeter: user.dir  =D:\OnGateway\jmeterMvn\target\jmeter\bin
+2018-07-17 15:03:55,500 INFO o.a.j.JMeter: PWD       =D:\OnGateway\jmeterMvn\target\jmeter\bin
+2018-07-17 15:04:00,082 INFO o.a.j.JMeter: IP: 172.17.16.194 Name: DESKTOP-09QETSP FullName: DESKTOP-09QETSP
+2018-07-17 15:04:00,085 INFO o.a.j.s.FileServer: Default base='D:\OnGateway\jmeterMvn\target\jmeter\bin'
+2018-07-17 15:04:00,085 INFO o.a.j.s.FileServer: Set new base='D:\OnGateway\jmeterMvn\target\jmeter\testFiles'
+2018-07-17 15:04:00,293 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2018-07-17 15:04:00,306 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2018-07-17 15:04:00,310 INFO o.a.j.s.SaveService: Using SaveService properties version 3.2
+2018-07-17 15:04:00,319 INFO o.a.j.s.SaveService: Loading file: D:\OnGateway\jmeterMvn\target\jmeter\testFiles\test.jmx
+2018-07-17 15:04:00,373 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-07-17 15:04:00,373 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-07-17 15:04:00,374 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-07-17 15:04:00,374 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-07-17 15:04:00,374 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2018-07-17 15:04:00,374 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2018-07-17 15:04:00,486 INFO o.a.j.JMeter: Creating summariser <summary>
+2018-07-17 15:04:00,491 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2018-07-17 15:04:00,491 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-07-17 15:04:00,491 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-07-17 15:04:00,496 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2018-07-17 15:04:00,497 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2018-07-17 15:04:01,020 INFO o.a.j.JMeter: 正在运行的测试 (1531811041020)
+2018-07-17 15:04:01,051 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : 美团订单创建&顺丰达达
+2018-07-17 15:04:01,051 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group 美团订单创建&顺丰达达.
+2018-07-17 15:04:01,051 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-07-17 15:04:01,051 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2018-07-17 15:04:01,066 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2018-07-17 15:04:01,067 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 2 : 美团订单创建&顺丰达达
+2018-07-17 15:04:01,067 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group 美团订单创建&顺丰达达.
+2018-07-17 15:04:01,067 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-07-17 15:04:01,067 INFO o.a.j.t.ThreadGroup: Starting thread group... number=2 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2018-07-17 15:04:01,070 INFO o.a.j.t.JMeterThread: Thread started: 美团订单创建&顺丰达达 1-1
+2018-07-17 15:04:01,088 INFO o.a.j.u.BeanShellTestElement: 1531811041
+2018-07-17 15:04:01,093 INFO o.a.j.t.ThreadGroup: Started thread group number 2
+2018-07-17 15:04:01,093 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2018-07-17 15:04:01,096 INFO o.a.j.t.JMeterThread: Thread started: 美团订单创建&顺丰达达 2-1
+2018-07-17 15:04:01,098 INFO o.a.j.u.BeanShellTestElement: 1531811041
+2018-07-17 15:04:01,100 INFO o.a.j.p.h.s.HTTPJavaImpl: Maximum connection retries = 0
+2018-07-17 15:04:01,101 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2018-07-17 15:04:01,101 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2018-07-17 15:04:01,101 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2018-07-17 15:04:01,101 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2018-07-17 15:04:01,433 INFO o.a.j.r.Summariser: summary +      1 in 00:00:00 =    2.4/s Avg:   316 Min:   316 Max:   316 Err:     1 (100.00%) Active: 2 Started: 2 Finished: 0
+2018-07-17 15:04:01,434 INFO o.a.j.u.BeanShellTestElement: 1531811041
+2018-07-17 15:04:01,436 INFO o.a.j.u.BeanShellTestElement: 1531811041
+2018-07-17 15:04:01,623 INFO o.a.j.t.JMeterThread: Thread is done: 美团订单创建&顺丰达达 1-1
+2018-07-17 15:04:01,623 INFO o.a.j.t.JMeterThread: Thread finished: 美团订单创建&顺丰达达 1-1
+2018-07-17 15:04:01,632 INFO o.a.j.t.JMeterThread: Thread is done: 美团订单创建&顺丰达达 2-1
+2018-07-17 15:04:01,632 INFO o.a.j.t.JMeterThread: Thread finished: 美团订单创建&顺丰达达 2-1
+2018-07-17 15:04:01,632 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2018-07-17 15:04:01,640 INFO o.a.j.r.Summariser: summary +      3 in 00:00:00 =   14.5/s Avg:   232 Min:   186 Max:   316 Err:     1 (33.33%) Active: 0 Started: 2 Finished: 2
+2018-07-17 15:04:01,640 INFO o.a.j.r.Summariser: summary =      4 in 00:00:01 =    6.5/s Avg:   253 Min:   186 Max:   316 Err:     2 (50.00%)
